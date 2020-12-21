@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Muli';
+    overflow-x: hidden;
+}
+
+
+.container {
+    overflow-x: hidden;
+    width: 100%;
+    align-items: center;
+    position: absolute;
+}
+
+.cloud-me{
+    position: relative;
+    margin-top: 80px;
+    height: 203.62px;
+    /* background-color: blueviolet; */
+}
+.sun-me {
+    position: absolute;
+    float: right;
+    top: 0%;
+    transform: translate(50%,-50%);
+    right: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+.up-cloud {
+    position: absolute;
+    float: right;
+    /* transform: translate(0%,20%); */
+    right: 0;
+    overflow: hidden;
+    animation: up-cloudy 10s ease infinite alternate;
+    transform-origin: center;
+    /* transform-box: fill-box; */
+}
+
+.up-cloud-1 {
+    position: absolute;
+    /* float: right; */
+    /* transform: translate(0%,34%); */
+    /* right: 0; */
+    overflow: hidden;
+    bottom: 20%;
+    animation: up-cloud-2 10s ease infinite alternate;
+    transform-origin: center;
+    /* transform-box: fill-box; */
+    /* left: 0% */
+}
+
+@keyframes up-cloudy {
+    from{
+        transform: translateX(10vw);
+    }
+    to{
+        transform: translateX(-20vw);
+    }
+}
+
+@keyframes up-cloud-2 {
+    from{
+        transform: translateX(0vw);
+    }
+    to{
+        transform: translateX(40vw);
+    }
+}
+
+
+
+.landing-svg {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    margin-top: -2%;
+    /* right: -20%; */
+    z-index: -1;
+}
+
+h1 {
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 4%;
+}
+
+.container h1 , .container form{
+    display: block;
+    align-items: center;
+    position: absolute;
+    top: 0;
+}
+
+.container form{
+    top: 5px;
+    left: 25px;
+    height: 140px;
+    /* left: 20%; */
+    /* margin: 0 20px; */
+}
+
+.container form input {
+    margin-right: 10px;
+    /* background-color: #; */
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: 0px;
+    font-size: 20px;
+    box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.2), 1px 2px 2px 1px rgba(0,0,0,0.2);
+}
+
+.container form input:focus, .container form input:active,
+.container form button:focus, .container form button:active{
+    outline: 0;
+}
+
+.container form button:active, .container form input:active{
+    transform: scale(0.98);
+}
+
+.container form input:focus{
+    transition-duration: 1.1s;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.container form button {
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: #00B0FF;
+    border: 0;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.1);
+    
+}
+#sun-sun{
+    animation: sun-sun 10s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes sun-sun {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+#flower{
+    animation: flower 5s linear infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes flower {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+
+#dog {
+    animation: dog 1s linear infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes dog {
+    from{
+        transform: rotateZ(-10deg);
+    }
+    to {
+        transform: rotateZ(10deg);
+    }
+}
+
+
+#leaf1{
+    animation: type1 2s linear infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+@keyframes type1{
+    from{
+        transform: rotateZ(-30deg);
+    }
+    to{
+        transform: rotateZ(30deg);
+    }
+}
+
+#leaf2{
+    animation: type2 3s linear infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+@keyframes type2{
+    from{
+        transform: rotateZ(-20deg);
+    }
+    to{
+        transform: rotateZ(30deg);
+    }
+}
+
+#leaf3{
+    animation: type3 2.5s linear infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+@keyframes type3{
+    from{
+        transform: rotateZ(-30deg);
+    }
+    to{
+        transform: rotateZ(10deg);
+    }
+}
+
+
+#bush, #leaves, #hand{
+    animation: bush 2.5s linear infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+@keyframes bush{
+    from{
+        transform: rotateZ(-10deg);
+    }
+    to{
+        transform: rotateZ(5deg);
+    }
+}
+
+.below {
+    margin-top: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#bg-1{
+    animation: bg-1 2s linear infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes bg-1{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0.90);
+    }
+}
+
+
+.show-con{
+    /* background-color: blueviolet; */
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-me{
+    /* background-color: cadetblue; */
+    width: 40vw;
+    height: 70vh;
+    position: relative;
+}
+
+.main-svg {
+    position: absolute;
+}
+
+.out-me{
+    width: 30vw;
+    height: 60vh;
+    border: 2px black solid;
+    border-radius: 3px;
+    margin: 20px 0 0 40px;
+    box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.2), 1px 2px 2px 1px rgba(0,0,0,0.2);
+}
