@@ -6,6 +6,7 @@
     <title>Weather App</title>
     <!-- <link rel= "stylesheet" type= "text/css" href= "main.css"> -->
     <link rel= "stylesheet" type= "text/css" href= "{{url_for('static', filename='main.css')}}">
+
 </head>
 <body>
 
@@ -476,30 +477,41 @@
             
             <form method="POST">
                 <input name="query" type="text" placeholder="Enter city...">
-                <button style="color: white;" type="submit" value="submit" class="submit">Search</button>
+                <a class="submit" href="#below"><button href="#below" style="color: white;" type="submit" value="submit">Search</button></a>
             </form>
     </div>
 
 
-    <div class="below">
+    <div id="below" class="below">
 
         <br><br>
         <hr>
         
         <br><br>
         <hr>
-        
-        <br><br>
         <div class="show-con">
+
             <div class="box-me">
                 <div class="main-svg">
                     {{ types[data['main_weather_type']]|safe }}
                 </div>
-                <div class="out-me"></div>
+                <div class="out-me">
+                    <h1 style="margin-top: 50px;">{{ data['name'] }}  - </h1>
+                    <div class="data-me">
+                        <h2> <sup>Max:{{ data['max_temp'] }}°C</sup> <br> &emsp; {{ data['current_temp'] }}°C </h2>
+                        <h2> <sub>Min:{{ data['min_temp'] }}°C</sub> </h2>
+                    </div> <br>
+                    <h2 style="margin-left: 60px;">Weather  :   &emsp;{{ data['main_weather_type'] }}</h2>
+                    <h2 style="margin-left: 60px;">Longitude  :   &emsp;{{ data['coor'][0] }}</h2>
+                    <h2 style="margin-left: 60px;">Latitude  :   &emsp;{{ data['coor'][1] }}</h2>
+                    <h2 style="margin-left: 60px;">Pressure  :   &emsp;{{ data['pressure'] }} hPa</h2>
+                    <h2 style="margin-left: 60px;">Humidity  :   &emsp;{{ data['humidity'] }} %</h2>
+                    <!-- <h2 style="margin-left: 60px;">Visibility  :   &emsp;{{ data['visibility'] }} meter(s)</h2> -->
+                    <h2 style="margin-left: 60px;">Wind Speed :   &emsp;{{ data['wind'][0] }} meter/sec</h2>
+                    <h2 style="margin-left: 60px;">Wind Direction :   &emsp;{{ data['wind'][1] }}°</h2>
+                </div>
             </div>
         </div>
-
-        <br><br>
         <hr>
         
         <br><br>

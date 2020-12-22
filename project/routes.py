@@ -11,7 +11,22 @@ main = Blueprint('main', __name__)
 def index():
     types = type()
     print("YOOO")
-    data = []
+    data = {
+        'name': '-',
+        'coor': '-',
+        'main_weather_type': '-',
+        'current_temp': '-',
+        'min_temp': '-',
+        'max_temp': '-',
+        'pressure': '-',
+        'humidity': '-',
+        'visibility': '-',
+        'wind': '-',
+        'dt': '-',
+        'country': '-',
+        'sun_time': '-',
+        'timezone': '-'
+    }
     message = ''
     no_data = False
     if request.method == "POST":
@@ -20,7 +35,7 @@ def index():
         else:
             data = give_me(request.form.get('query'))
             message = "Results"
-    if no_data:
-        message = "No Results found!"
+    if request.method == "GET":
+        message = "Search any city or no Results found!"
 
     return render_template('index.html', data=data, message=message, types=types)
